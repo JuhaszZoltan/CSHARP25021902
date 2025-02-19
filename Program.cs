@@ -24,7 +24,7 @@ var f5 = hallgatok
     .MaxBy(h => h.Eredmenyek["Frontend"] + h.Eredmenyek["Backend"]);
 Console.WriteLine($"f5: legjobb noi webes: {f5.Nev}");
 
-var f6 = hallgatok.Where(h => h.Befizetes >= 2600).Select(h => h.Nev);
+var f6 = hallgatok.Where(h => h.Befizetes >= TELJES_AR).Select(h => h.Nev);
 Console.WriteLine($"f6: akik mar elofinansziroztak:");
 foreach (var n in f6) Console.WriteLine($"\t- {n}");
 
